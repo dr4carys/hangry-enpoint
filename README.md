@@ -9,6 +9,7 @@
 <br/>2.npm run start
 
 #POSTMAN LINK
+RUN on port 3000
 https://www.getpostman.com/collections/25c512a26dfd8d7f30ad
 
 
