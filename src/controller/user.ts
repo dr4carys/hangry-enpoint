@@ -50,3 +50,14 @@ export const userLogin = async (ctx: ParameterizedContext, next: Function) => {
   ctx.body = { token };
   return;
 };
+
+export const userLogout = async (ctx: ParameterizedContext, next: Function) => {
+  const { userRef } = ctx._auth.user;
+  const access = await Access.findOneAndUpdate({ userRef, isActive: false });
+  if (!access) {
+    ctx.status = 409;
+    return;
+  }
+  ctx.status = 200;
+  return;
+};
