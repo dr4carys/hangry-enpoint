@@ -10,7 +10,7 @@ import { Access } from '../models/access';
 export const authentication =
   (errStatus: number = 401) =>
   async (ctx: ParameterizedContext, next: Function) => {
-    // bypass auth request for adminUserVerifyGoogleSignin
+    // BYPASS FOR AUTH USING GRAPHQL
     // try {
     //   if (req.body.query) {
     //     const {
